@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web page</title>
+<script type="text/javascript">
+	function doValidate() {
+		var a = document.getElemetsById("number").value;
+		if (x == null || x == "") {
+			document.getElemetsById("error").innerHTML = "Please fill the details";
+			return false;
+		}
+		return true;
+	}
+</script>
+<style>
+#error {
+	color: red;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<h1 align="center">Ticket Cost</h1>
+	<div id="error"></div>
+		<form action="Index">
+			<table align="center">
+				<tr>
+					<td>Seating Type</td>
+					<td><select name="seatingType">
+							<option value="Platinum">Platinum</option>>
+							<option value="Gold">Gold</option>>
+							<option value="Silver">Silver</option>>
+					</select></td>
+				</tr>
+				<tr>
+					<td>Number of Tickets</td>
+					<td><input type="number" name="numOfTickets"></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="Get Cost"
+						onclick="return doValidate()"></td>
+				</tr>
+			</table>
+		</form>
+	
+</body>
+</html>
